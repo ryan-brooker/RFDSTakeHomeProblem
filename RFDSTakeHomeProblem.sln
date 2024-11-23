@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFDSTakeHomeProblem", "RFDSTakeHomeProblem\RFDSTakeHomeProblem.csproj", "{6FC97584-133E-4178-827D-C707E6BC71C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RFDSTakeHomeProblem.Tests", "RFDSTakeHomeProblem.Tests\RFDSTakeHomeProblem.Tests.csproj", "{5BF27395-0542-451F-B245-75E0D8FDD472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FC97584-133E-4178-827D-C707E6BC71C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC97584-133E-4178-827D-C707E6BC71C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC97584-133E-4178-827D-C707E6BC71C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC97584-133E-4178-827D-C707E6BC71C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BF27395-0542-451F-B245-75E0D8FDD472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BF27395-0542-451F-B245-75E0D8FDD472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BF27395-0542-451F-B245-75E0D8FDD472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BF27395-0542-451F-B245-75E0D8FDD472}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC1DC3C2-E8FC-4BC5-945A-D41CEF897571}
+	EndGlobalSection
+EndGlobal
