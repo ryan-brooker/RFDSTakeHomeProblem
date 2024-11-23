@@ -98,7 +98,7 @@ To transform this console application into a production ready service that can b
 
 5. **DevOps Integration**:
    - Establish CI/CD pipelines using Azure DevOps
-   - Set up automated testing with deployment
+   - Set up automated testing for deployment
 
 ## License
 
