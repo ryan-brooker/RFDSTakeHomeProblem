@@ -84,7 +84,7 @@ To transform this console application into a production ready service that can b
    - Maintain the console application as a CLI tool for direct usage
 
 2. **Security Infrastructure**:
-   - Deploy behind Azure Application Gateway for SSL termination and WAF protection
+   - Deploy behind Azure Application Gateway for WAF protection
    - Implement rate limiting and DDoS protection
 
 3. **Scalability and Reliability**:
