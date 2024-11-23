@@ -6,9 +6,9 @@ This is an implementation of the Caesar Cipher decryption system for the RFDS ta
 - [Overview](#overview)
 - [Getting Started](#getting-started)
 - [Architecture](#architecture)
-- [Design Decisions](#design-decisions)
-- [RDFS Solution Description](#rfds-solution-description)
-- [RDFS Productionization Proposal](#rfds-productionization-proposal)
+- [Design Decisions](#design)
+- [Solution Description](#solution-description)
+- [Productionization Proposal](#productionization-proposal)
 
 ## Overview
 
@@ -23,11 +23,6 @@ This solution implements a secure implementation of the Caesar Cipher decryption
 - Full test coverage
 
 ## Getting Started
-
-### Prerequisites
-- .NET 8.0 SDK
-- Git
-- Visual Studio 2022 (optional)
 
 ### Installation
 ```bash
@@ -61,7 +56,7 @@ dotnet run --project RFDSTakeHomeProblem
 - **RFDSTakeHomeProblem**: Core business logic and interfaces
 - **RFDSTakeHomeProblem.Tests**: xUnit tests
 
-### Design Decisions
+### Design
 
 #### Assumptions
 - Input is lowercase letters only
@@ -70,7 +65,7 @@ dotnet run --project RFDSTakeHomeProblem
 - In-memory processing is sufficient
 
 
-## RDFS Solution Description 
+## Solution Description 
 This solution implements a console based application that decrypts messages encrypted using the Caesar Cipher algorithm. 
 Users interact with the application through a command-line interface where they input encrypted text. 
 The application processes this input through a secure decryption service that shifts each letter by three positions in the alphabet to reveal the original message. 
@@ -80,9 +75,9 @@ Security measures include input validation, memory protection (clearing sensitiv
 The solution uses .NET 8.0's and implements xUnit tests to ensure the solution works as expected.
 
 
-## RDFS Productionization Proposal
+## Productionization Proposal
 
-To transform this console application into a production ready service that can be securely used by various users and systems, I would propose the following enhancements:
+To transform this console application into a production ready service that can be securely used by various users and systems, I would propose the following:
 
 1. **Service Layer Transformation**:
    - Implement a RESTful Web API using ASP.NET Core to allow HTTP-based access
@@ -104,8 +99,6 @@ To transform this console application into a production ready service that can b
 5. **DevOps Integration**:
    - Establish CI/CD pipelines using Azure DevOps
    - Set up automated testing with deployment
-
-This productionization approach ensures the solution can be securely and reliably used across different scenarios, from single user operations to high-volume enterprise integrations.
 
 ## License
 
