@@ -6,7 +6,7 @@ using System.Text;
 
 namespace RFDSTakeHomeProblem.Services;
 
-public class CipherService : ICipherService, IDisposable
+public class CipherService : ICipherService
 {
     private readonly ILogger<CipherService> _logger;
     private readonly CipherSettings _settings;
@@ -14,8 +14,8 @@ public class CipherService : ICipherService, IDisposable
 
     public CipherService(ILogger<CipherService> logger, CipherSettings settings)
     {
-        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        _settings = settings ?? throw new ArgumentNullException(nameof(settings));
+        _logger = logger;
+        _settings = settings;
     }
 
     public string Decrypt(string cipherText)
@@ -75,7 +75,7 @@ public class CipherService : ICipherService, IDisposable
 
     public void ClearSensitiveData()
     {
-        // Clear 'sensitive' data from memory post encryption
+        // Clear 'sensitive' data from memory post decryption
         if (_sensitiveDataBuffer != null)
         {
             // Overwrite the buffer with zeros
@@ -88,11 +88,5 @@ public class CipherService : ICipherService, IDisposable
             _sensitiveDataBuffer.Clear();
             _sensitiveDataBuffer = null;
         }
-    }
-
-    public void Dispose()
-    {
-        ClearSensitiveData();
-        GC.SuppressFinalize(this);
     }
 }

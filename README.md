@@ -66,10 +66,10 @@ dotnet run --project RFDSTakeHomeProblem
 
 
 ## Solution Description 
-This solution implements a console based application that decrypts messages encrypted using the Caesar Cipher algorithm. 
+This solution implements a console based application that decrypts messages encrypted using the Caesar Cipher algorithm in O(2n  + c) time complexity or O(n) for short. 
 Users interact with the application through a command-line interface where they input encrypted text. 
-The application processes this input through a secure decryption service that shifts each letter by three positions in the alphabet to reveal the original message. 
-The implementation utilizes a layered architecture with dependency injection allowing for easy modification and extension. 
+The application processes this input through a decryption service that shifts each letter by three positions in the alphabet to reveal the original message. 
+The implementation uses a layered architecture with dependency injection allowing for easy modification and extension. 
 Added logging to track operations, while error handling ensures graceful failure scenarios. 
 Security measures include input validation, memory protection (clearing sensitive data), and maximum input length restrictions. 
 The solution uses .NET 8.0's and implements xUnit tests to ensure the solution works as expected.
@@ -80,8 +80,7 @@ The solution uses .NET 8.0's and implements xUnit tests to ensure the solution w
 To transform this console application into a production ready service that can be securely used by various users and systems, I would propose the following:
 
 1. **Service Layer Transformation**:
-   - Implement a RESTful Web API using ASP.NET Core to allow HTTP-based access
-   - Maintain the console application as a CLI tool for direct usage
+   - Implement a RESTful Web API using ASP.NET Core to allow for web use
 
 2. **Security Infrastructure**:
    - Deploy behind Azure Application Gateway for WAF protection

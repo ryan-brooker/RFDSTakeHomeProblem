@@ -43,15 +43,6 @@ public class Program
             Console.WriteLine("An unexpected error occurred.");
             logger.LogError(ex, "An unexpected error occurred");
         }
-        finally
-        {
-            // This is probably not needed but it shows that if cipherService implements
-            // IDisposable we can dispose before doing any other work
-            if (cipherService is IDisposable disposable)
-            {
-                disposable.Dispose();
-            }
-        }
     }
 
     private static ServiceProvider ConfigureServices()

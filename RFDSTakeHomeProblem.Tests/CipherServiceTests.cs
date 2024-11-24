@@ -59,6 +59,8 @@ public class CipherServiceTests
     {
         _service.Decrypt("abc");
         _service.ClearSensitiveData();
+
+        // Ensure ClearSensitiveData() runs
         Assert.True(true);
     }
 }
